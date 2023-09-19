@@ -1,0 +1,172 @@
+{# Le bloc styles #}
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="{{ asset('styles/car.css') }}">
+    {% endblock %}
+
+{# Le bloc javascript #}
+
+    {% block javascripts %}
+        <script src="{{ asset('scripts/vehicules.js') }}" defer></script>
+    {% endblock %}
+
+{# Le bloc body #}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/308.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>V.Parrot - Opel Zafira</title>
+</head>
+
+<header>
+    <span class="center-header">
+
+        <nav class="left-link">
+            <img class="header-img"src="images/header.png" alt="">
+        </nav>
+
+        <nav class="right-link">
+
+            <a href="main" class="link">
+                <span class="icon"><i class="bi bi-house"></i>
+                </span>Accueil
+            </a>
+
+            <a href="presta" class="link">
+                <span class="icon"><i class="bi bi-pencil-fill"></i>
+                </span>Prestations
+            </a>
+            <a href="vehicules" class="link">
+                <span class="icon"><i class="bi bi-car-front-fill"></i>
+                </span>Véhicules
+            </a>
+            <a href="pieces" class="link">
+                <span class="icon"><i class="bi bi-wrench"></i>
+                </span>Pièces
+            </a>
+            <a href="tuning" class="link">
+                <span class="icon"><i class="bi bi-tools"></i>
+                </span>Tuning
+            </a>
+            <a href="connexion" class="link">
+                <span class="icon"><i class="bi bi-person-fill"></i>
+                </span>Mon compte
+            </a>
+        </nav>
+
+    </span>
+</header>
+
+<body>
+    <main class="container">
+        <span class="container-info">   
+
+            <div class="container-left">
+                <img class="img" src="images/zafira.jpg" alt="">
+            </div>
+
+            <div class="container-right">
+
+                <div class="car-model">
+                    <h2>
+                        <span class="icon">
+                            <i class="bi bi-car-front-fill"></i>
+                        </span>
+                        Opel Zafira OPC
+                    </h2>
+                    <h4>
+                        <span class="icon">
+                            <i class="bi bi-cpu-fill"></i>
+                        </span>
+                        2.0l 240
+                    </h4>
+                    <h4>
+                        <span class="icon">
+                            <i class="bi bi-cursor-fill"></i>
+                        </span>
+                        130 860km
+                    </h4>
+                    <h4>
+                        <span class="icon">
+                            <i class="bi bi-calendar-event-fill"></i>
+                        </span>
+                        2010
+                    </h4>
+                    <h4>
+                        <span class="icon">
+                            <i class="bi bi-gear-fill"></i>
+                        </span>
+                        Manuelle
+                    </h4>
+                    <h4>
+                        <span class="icon">
+                            <i class="bi bi-fuel-pump-fill"></i>
+                        </span>
+                        Essence
+                    </h4>
+                </div>
+
+                <div class="localisation">
+                    <img class="img-map" src="images/finistere.png" alt="">
+                    <div class="text">
+                        <h4>
+                            <span class="icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </span>
+                            Localisation : Finistère, 29
+                        </h4>
+                        <h2>
+                            <span class="icon">
+                                <i class="bi bi-cash"></i>
+                            </span>
+                            Prix : 12 800€
+                        </h2>
+                        <div class="reserv">
+                            <button class="bg" type="button" id="Réserver" onclick="alert">Réserver</button>
+                            <h3 class="bg">Appeler</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </span>
+        
+        <span class="specs">
+            <h3 class="specs-title">Caractéristiques</h3>
+            <span class="specs-container">
+                <div class="left">
+                    <h4>Moteur</h4>
+                    <li>1.6l e-HDI 120cv</li>
+                    <li>Injection Directe</li>
+                    <li>4 cylindres</li>
+                    <li>Turbo</li>
+                    <li>Diesel</li>
+                </div>
+                <div class="center">
+                    <h4>Equipement de série</h4>
+                    <li>4 vitres électriques</li>
+                    <li>Climatisation bizone</li>
+                    <li>GPS Europe 7"</li>
+                    <li>Regulateur/Limiteur de vitesse</li>
+                </div>
+                <div class="right">
+                    <h4>Sécurité</h4>
+                    <li>ABS + ESP + TCS</li>
+                    <li>Aide au démarrage en côte</li>
+                    <li>Airbags frontaux/latéraux</li>
+                    <li>Détecteur de pluie</li>
+                </div>
+            </span>
+        </span>
+    </main>
+</body>
+
+{% endblock %}

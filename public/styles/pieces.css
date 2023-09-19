@@ -1,0 +1,283 @@
+@font-face {
+    font-family: MyFont;
+    src: url(font/Poppins-Regular.ttf);
+}
+
+body {
+    margin: 5px;
+    font-family: MyFont;
+    background-color: whitesmoke;
+}
+
+header {
+    background-color: gainsboro;
+    border-bottom: solid black 2px;
+}
+
+.center-header {
+    height: 130px;
+    display: flex;
+}
+
+.left-link {
+    text-align: left;
+    width: 30%;
+}
+
+.header-img {
+    float: left;
+    width: 75%;
+}
+
+.right-link {
+    margin: auto 30px;
+    text-align: right;
+    align-items: center;
+    display: block;
+    width: 70%;
+}
+
+.link {
+    background-color: lightblue;
+    border-radius: 10px;
+    border: solid black 2px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 12px 15px;
+    margin: 5px;
+}
+
+.icon {
+    margin: 5px;
+}
+
+.container {
+    width: 100%;
+    margin: 30px;
+}
+
+.box-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+}
+
+.box {
+    display: grid;
+    justify-content: center;
+    width: 97%;
+    box-shadow: 4px 4px 4px 4px gray;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
+.img {
+    object-fit: cover;
+    margin: auto;
+    border-radius: 10px !important;
+    height: 450px;
+    width: 450px;
+}
+
+.title {
+    background-color: lightblue;
+    border-radius: 10px;
+    border: solid black 2px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 12px 15px;
+    margin: 30px;
+    width: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.text {
+    display: block;
+    text-align: center;
+}
+
+.left {  
+    border-radius: 10px;
+    width: 30%;
+    padding: 10px;
+}
+
+.left-container {
+    margin: 20px;
+}
+
+.center {
+    border-radius: 10px;
+    width: 30%;
+    padding: 10px;
+}
+
+.center-container {
+    margin: 20px;
+}
+
+.right {
+    border-radius: 10px;
+    width: 30%;
+    padding: 10px;
+}
+
+.right-container {
+    margin: 20px;
+}
+
+footer {
+    background-color: gainsboro;
+    border-top: solid black 2px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-main {
+    display: flex;
+    width: 60%;
+    margin: auto;
+}
+
+.footer-left {
+    width: 30%;
+    display: block;
+}
+
+.footer-center {
+    width: 40%;
+    text-align: center;
+    display: block;
+}
+
+.footer-right {
+    width: 30%;
+    text-align: right;
+    display: block;
+}
+
+.network-title {
+    padding-top: 5px;
+}
+
+.network-list {
+    margin: auto;
+    align-items: center;
+}
+   
+
+.network {
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+    display: block;
+    align-items: center;
+}
+
+.clock {
+    margin: auto;
+}
+
+@media screen and (min-width: 400px) and ( max-width: 1200px ) {
+    
+    @font-face {
+        font-family: MyFont;
+        src: url(font/Poppins-Regular.ttf);
+    }
+    
+    body {
+        margin: 5px;
+        font-family: MyFont;
+        background-image: url('images/wheel.jpg') !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    header {
+        background-color: gainsboro;
+        border-bottom: solid black 2px;
+    }
+    
+    .img {
+        padding-top: 10px;
+        margin: auto;
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .img-2 {
+        float: right;
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .center-header {
+        height: 350px;
+        display: flex;
+    }
+    
+    .left-link {
+        align-content: left;
+        width: 100%;
+        transform:
+        translateY(150px)
+        translateX(70px);
+    }
+    
+    .header-img {
+        float: left;
+        width: 75%;
+    }
+    
+    .right-link {
+        margin: auto;
+        text-align: center;
+        align-items: right;
+        display: block;
+        width: 100%;
+        padding-top: 20px;
+    }
+    
+    .link {
+        background-color: lightblue;
+        border-radius: 10px;
+        border: solid black 2px;
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 12px 15px;
+        margin: auto;
+        display: block;
+        width: 60%;
+        align-items: right;
+    }
+    
+    .icon {
+        margin: 5px;
+    }
+
+    .box-container {
+        gap: 20px;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .box {
+        justify-content: center;
+        width: 97%;
+        box-shadow: 4px 4px 4px 4px gray;
+        border-radius: 10px;
+        padding-top: 20px;
+    }
+
+}

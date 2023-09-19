@@ -1,0 +1,477 @@
+{# Le bloc styles #}
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="{{ asset('styles/vehicules.css') }}">
+    {% endblock %}
+
+{# Le bloc javascript #}
+
+    {% block javascripts %}
+        <script src="{{ asset('scripts/vehicules.js') }}" defer></script>
+    {% endblock %}
+
+{# Le bloc body #}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vehicules.css">
+    <script src="scripts/vehicules.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>V.Parrot - Vehicules</title>
+</head>
+
+<header>
+    <span class="center-header">
+
+        <nav class="left-link">
+            <img class="header-img"src="images/header.png" alt="">
+        </nav>
+
+        <nav class="right-link">
+
+            <a href="main" class="link">
+                <span class="icon"><i class="bi bi-house"></i>
+                </span>Accueil
+            </a>
+
+            <a href="presta" class="link">
+                <span class="icon"><i class="bi bi-pencil-fill"></i>
+                </span>Prestations
+            </a>
+            <a href="vehicules" class="link">
+                <span class="icon"><i class="bi bi-car-front-fill"></i>
+                </span>Véhicules
+            </a>
+            <a href="pieces" class="link">
+                <span class="icon"><i class="bi bi-wrench"></i>
+                </span>Pièces
+            </a>
+            <a href="tuning" class="link">
+                <span class="icon"><i class="bi bi-tools"></i>
+                </span>Tuning
+            </a>
+            <a href="connexion" class="link">
+                <span class="icon"><i class="bi bi-person-fill"></i>
+                </span>Mon compte
+            </a>
+        </nav>
+    </span>
+</header>
+
+<body>
+    <main class="container">
+        <div class="container-left">
+            <div class="slider">
+                <div class="container-info">
+                    <h3 class="title">Kilométrage</h3>
+                    <div class="container-km-filter">
+                        <div class="test">
+                            <input type="range" min="0" max="500000" value="1000" id="mySlides1">
+                        </div>
+                        <div class="value" id="value">500000</div>
+                    </div>
+                </div>
+
+                <div class="container-info">
+                    <h3 class="title">Année</h3>
+                    <div class="container-km-filter">
+                        <div class="test">
+                            <input type="range" min="1980" max="2023" value="1981" id="mySlides1">
+                        </div>
+                        <div class="value" id="value">2023</div>
+                    </div>
+                </div>
+
+                <div class="container-info">
+                    <h3 class="title">Emission CO2</h3>
+                    <div class="container-km-filter">
+                        <div class="test">
+                            <input type="range" min="0" max="300" value="1" id="mySlides1">
+                        </div>
+                        <div class="value" id="value">300</div>
+                    </div>
+                </div>
+
+                <div class="container-info">
+                    <h3 class="title">Crit-Air</h3>
+                    <div class="container-km-filter">
+                        <div class="test">
+                            <input type="range" min="1" max="5" value="1" id="mySlides1">
+                        </div>
+                        <div class="value" id=".value">5</div>
+                    </div>
+                </div>
+
+                <div class="container-info">
+                    <h3 class="title">Puissance</h3>
+                    <div class="container-km-filter">
+                        <div class="test">
+                            <input type="range" min="50" max="1000" value="10" id="mySlides1">
+                        </div>
+                        <div class="value" id=".value">1000 ch</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-info">
+                <h3 class="title">Marque</h3>
+                <div class="container-km-filter">
+                    <div class="slider">
+                       <select class="brand" name="format" id="format">
+                        <option selected value="Marque">Choisissez une marque<i class="bi bi-arrow-down-short"></i></i></option>
+                        <option value="Audi">Audi</option>
+                       </select>
+                    </div>
+                    <div class="value"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-right">
+            <div class="content-1">
+                <span class="img-content">
+                    <img src="images/308.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="p308">Peugeot 308 GT-Line</a>
+                        </h4>
+                        <li>1.6l BlueHDI 120</li>
+                        <li>58 552km</li>
+                        <li>Prix : 22 550€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 33
+                        </h4>
+                    </div>
+                </span>
+                <span class="img-content">
+                    <img src="images/AudiA3.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="a3">Audi A3</a>
+                        </h4>
+                        <li>2.0l TDI 150</li>
+                        <li>60 150km</li>
+                        <li>Prix : 25 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 24
+                        </h4>
+                    </div>
+                </span>
+                <span class="img-content">
+                    <img src="images/corsa.jpeg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="corsa">Opel Corsa</a>
+                        </h4>
+                        <li>1.3l CDTI 75 Ecoflex</li>
+                        <li>150 150km</li>
+                        <li>Prix : 4 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 24
+                        </h4>
+                    </div>
+                </span>
+                <span class="img-content">
+                    <img src="images/xc90.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="xc90">Volvo XC90</a>
+                        </h4>
+                        <li>2.0l Hybride 320 + 87</li>
+                        <li>12 150km</li>
+                        <li>Prix : 48 700€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 47
+                        </h4>
+                    </div>
+                </span>
+            </div>
+
+            <div class="content-1">
+                <span class="img-content">
+                    <img src="images/clio.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="clio">Renault Clio 5 Intens</a>
+                        </h4>
+                        <li>1.3l TCE 130</li>
+                        <li>10km</li>
+                        <li>Prix : 22 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 33
+                        </h4>
+                    </div>
+                </span>
+                <span class="img-content">
+                    <img src="images/cx5.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="cx5">Mazda CX-5</a>
+                        </h4>
+                        <li>2.2l SkyActiv-D 175</li>
+                        <li>120 300km</li>
+                        <li>Prix : 26 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 24
+                        </h4>
+                    </div>
+                </span>
+                <span class="img-content">
+                    <img src="images/focus.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="focus">Ford Focus 4</a>
+                        </h4>
+                        <li>1.5 TDCI 120</li>
+                        <li>60 150km</li>
+                        <li>Prix : 15 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 24
+                        </h4>
+                    </div>
+                </span>
+                <span class="img-content">
+                    <img src="images/i20.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="i20">Hyundai i20</a>
+                        </h4>
+                        <li>1.0l T-GDI 100</li>
+                        <li>10 150km</li>
+                        <li>Prix : 25 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 17
+                        </h4>
+                    </div>
+                </span>
+            </div>
+
+            <div class="content-1">
+                <span class="img-content">
+                    <img src="images/c3.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                                <a href="c3">Citroën C3</a>
+                        </h4>
+                        <li>1.4l HDI 75</li>
+                        <li>170 150km</li>
+                        <li>Prix : 4 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 92
+                        </h4>
+                    </div>
+                </span>
+                <span class="img-content">
+                    <img src="images/polo.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="polo">Volkswagen Polo 7</a>
+                        </h4>
+                        <li>1.0l TSI 95</li>
+                        <li>20 150km</li>
+                        <li>Prix : 22 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 24
+                        </h4>
+                    </div>
+                </span>
+                <span class="img-content">
+                    <img src="images/leon.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="leon">Seat Leon 3</a>
+                        </h4>
+                        <li>1.5l e-TSI 150</li>
+                        <li>30 150km</li>
+                        <li>Prix : 30 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 33
+                        </h4>
+                    </div>
+                </span>
+                <span class="img-content">
+                    <img src="images/micra.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="micra">Nissan Micra</a>
+                        </h4>
+                        <li>1.2l 80</li>
+                        <li>120 140km</li>
+                        <li>Prix : 4 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 17
+                        </h4>
+                    </div>
+                </span>
+            </div>
+
+            <div class="content-1">
+                <span class="img-content">
+                    <img src="images/zafira.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="zafira">Opel Zafira OPC</a>
+                        </h4>
+                        <li>2.0l 240</li>
+                        <li>130 860km</li>
+                        <li>Prix : 12 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 29
+                        </h4>
+                    </div>
+                </span>
+                <span class="img-content">
+                    <img src="images/bravo.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="bravo">Fiat Bravo</a>
+                        </h4>
+                        <li>1.6l Multijet 120</li>
+                        <li>100 400km</li>
+                        <li>Prix : 9 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 85
+                        </h4>
+                    </div>
+                </span>
+                <span class="img-content">
+                    <img src="images/407.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="p407sw">Peugeot 407 SW</a>
+                        </h4>
+                        <li>2.0l HDI 136</li>
+                        <li>220 750km</li>
+                        <li>Prix : 3 990€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 16
+                        </h4>
+                    </div>
+                </span>
+                <span class="img-content">
+                    <img src="images/captur.jpg" alt="">
+                    <div class="specs">
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-car-front-fill"></i>
+                            </span>
+                            <a href="captur">Renault Captur</a>
+                        </h4>
+                        <li>1.5l DCI 90</li>
+                        <li>64 000km</li>
+                        <li>Prix : 10 800€</li>
+                        <h4 class="car-title">
+                            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                            Localisation : 33
+                        </h4>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    <span class="footer-main">
+        <span class="footer-left">
+            <ul class="network-list">
+                <h3 class="network-title"><span class="icon"> 
+                </span><i class="bi bi-search"></i>
+                Retrouvez-nous sur :</h3>
+                <a href="" class="network">
+                    <span class="icon"><i class="bi bi-instagram"></i>
+                    </span>
+                    Instagram</a>
+                <a href="" class="network">
+                    <span class="icon"><i class="bi bi-facebook"></i>
+                    </span>
+                    Facebook</a>
+                <a href="" class="network">
+                    <span class="icon"><i class="bi bi-snapchat"></i>
+                    </span>
+                    Snapchat</a>
+                <a href="" class="network">
+                    <span class="icon"><i class="bi bi-whatsapp"></i>
+                    </span>
+                    WhatsApps</a>
+            </ul>
+        </span>
+
+        <span class="footer-center">
+            <h3 class="network-title"><span class="icon">
+            </span><i class="bi bi-geo-alt-fill"></i>
+            Ou sommes-nous ?</h3>
+            <p class="footer-text">31 Route du Ruisseau
+            <p class="footer-text">Batiment A,</p>
+            <p class="footer-text">Toulouse, </p>
+            <p class="footer-text">31000</p>
+        </span>
+
+        <span class="footer-right">
+            <h3 class="network-title"><span>
+            </span><i class="bi bi-clock-fill"></i>
+            Nos horaires : </h3>
+            <span class="clock">
+                <h4>Du Lundi au Vendredi :</h4>
+                <p>9h-12h30 / 14h30-18h30</p>
+                <h4>Le samedi :</h4>
+                <p>10h-12h / 14h-18h</p>
+            </span>
+        </span>
+    </span>
+</footer>
+</body>
+</html>
+
+{% endblock %}

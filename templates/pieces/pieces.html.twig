@@ -1,0 +1,201 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ asset('styles/pieces.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pieces.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>V.Parrot - Pieces</title>
+</head>
+
+<header>
+    <span class="center-header">
+
+        <nav class="left-link">
+            <img class="header-img"src="images/header.png" alt="">
+        </nav>
+
+        <nav class="right-link">
+
+            <a href="main" class="link">
+                <span class="icon"><i class="bi bi-house"></i>
+                </span>Accueil
+            </a>
+
+            <a href="presta" class="link">
+                <span class="icon"><i class="bi bi-pencil-fill"></i>
+                </span>Prestations
+            </a>
+            <a href="vehicules" class="link">
+                <span class="icon"><i class="bi bi-car-front-fill"></i>
+                </span>Véhicules
+            </a>
+            <a href="pieces" class="link">
+                <span class="icon"><i class="bi bi-wrench"></i>
+                </span>Pièces
+            </a>
+            <a href="tuning" class="link">
+                <span class="icon"><i class="bi bi-tools"></i>
+                </span>Tuning
+            </a>
+            <a href="connexion" class="link">
+                <span class="icon"><i class="bi bi-person-fill"></i>
+                </span>Mon compte
+            </a>
+        </nav>
+    </span>
+</header>
+
+<body>
+
+<main class="container">
+    <span class="flex-container">
+        <span class="box-container">
+            <div class="left">
+                <span class="left-container">
+                    <div class="box">
+                        <img class="img" src="images/courroie.jpg" alt="">
+                        <h3 class="title">Courrie de distribution</h3>
+                        <p class="text">La courroie de distribution est l'organisme en charge de syncroniser 
+                            les pistons et les soupapes. C'est une pièce indispensable au bon fonctionnement du moteur.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <img class="img" src="images/turbo.jpg" alt="">
+                        <h3 class="title">Turbo</h3>
+                        <p class="text">Le turbo est une pièce permettant de donner beaucoup de puissance et 
+                            est indispensable pour un moteur diesel.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <img class="img" src="images/battery.jpg" alt="">
+                        <h3 class="title">Batterie</h3>
+                        <p class="text">La batterie de la voiture est essentielle lors du démarrage du véhicule 
+                            et intervient aussi lorsque vous branchez votre smartphone, ou lorsque vous faites 
+                            fonctionner le Start & Stop.
+                        </p>
+                    </div>
+                </span>
+            </div>
+
+            <div class="center">
+                <span class="center-container">
+                    <div class="box">
+                        <img class="img" src="images/clutch-2.jpg">
+                        <h3 class="title">Embrayage</h3>
+                        <p></p>
+                    </div>
+
+                    <div class="box">
+                        <img class="img" src="images/gearbox-2.jpg" alt="">
+                        <h3 class="title">Boite à vitesses</h3>
+                        <p class="text">La boite à vitesse est un élement présent sur tout les véhicules. il assure 
+                            la bonne cohésion entre les passage de rapport.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <img class="img" src="images/mirror.jpg" alt="">
+                        <h3 class="title">Rétroviseur</h3>
+                        <p class="text">Le rétroviseur est un élément indispensable pour la sécurité du conducteur, apparue pour 
+                            le grand publique en 1928, il ne sera obligatoire qu'en 1949. Les rétroviseurs tels que nous les 
+                            connaissons sont obligatoires depuis 1972.
+                        </p>
+                    </div>
+                </span>
+            </div>
+
+            <div class="right">
+                <span class="right-container">
+                    <div class="box">
+                        <img class="img" src="images/intercooler.jpg" alt="">
+                        <h3 class="title">Radiateur</h3>
+                        <p></p>
+                    </div>
+
+                    <div class="box">
+                        <img class="img" src="images/battery.jpg" alt="">
+                        <h3 class="title">Batterie</h3>
+                        <p class="text">La batterie de la voiture est essentielle lors du démarrage du véhicule 
+                            et intervient aussi lorsque vous branchez votre smartphone, ou lorsque vous faites 
+                            fonctionner le Start & Stop.
+                        </p>
+
+                    <div class="box">
+                        <img class="img" src="images/battery.jpg" alt="">
+                        <h3 class="title">Batterie</h3>
+                        <p class="text">La batterie de la voiture est essentielle lors du démarrage du véhicule 
+                            et intervient aussi lorsque vous branchez votre smartphone, ou lorsque vous faites 
+                            fonctionner le Start & Stop.
+                        </p>
+                    </div>
+                </span>
+            </div>
+        </span>
+    </span>
+</main>
+
+<footer>
+    <span class="footer-main">
+        <span class="footer-left">
+            <ul class="network-list">
+                <h3 class="network-title"><span class="icon"> 
+                </span><i class="bi bi-search"></i>
+                Retrouvez-nous sur :</h3>
+                <a href="" class="network">
+                    <span class="icon"><i class="bi bi-instagram"></i>
+                    </span>
+                    Instagram</a>
+                <a href="" class="network">
+                    <span class="icon"><i class="bi bi-facebook"></i>
+                    </span>
+                    Facebook</a>
+                <a href="" class="network">
+                    <span class="icon"><i class="bi bi-snapchat"></i>
+                    </span>
+                    Snapchat</a>
+                <a href="" class="network">
+                    <span class="icon"><i class="bi bi-whatsapp"></i>
+                    </span>
+                    WhatsApps</a>
+            </ul>
+        </span>
+
+        <span class="footer-center">
+            <h3 class="network-title"><span class="icon">
+            </span><i class="bi bi-geo-alt-fill"></i>
+            Ou sommes-nous ?</h3>
+            <p class="footer-text">31 Route du Ruisseau
+            <p class="footer-text">Batiment A,</p>
+            <p class="footer-text">Toulouse, </p>
+            <p class="footer-text">31000</p>
+        </span>
+
+        <span class="footer-right">
+            <h3 class="network-title"><span>
+            </span><i class="bi bi-clock-fill"></i>
+            Nos horaires : </h3>
+            <span class="clock">
+                <h4>Du Lundi au Vendredi :</h4>
+                <p>9h-12h30 / 14h30-18h30</p>
+                <h4>Le samedi :</h4>
+                <p>10h-12h / 14h-18h</p>
+            </span>
+        </span>
+    </span>
+</footer>
+</body>
+</html>
+
+{% endblock %}
