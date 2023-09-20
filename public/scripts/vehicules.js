@@ -10,6 +10,4 @@ function handleSliderChange () {
 
     console.log("Slider 1 value:", value1);
     console.log("Slider 2 value:", value2);
-
 }
-
