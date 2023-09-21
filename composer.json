@@ -89,9 +89,6 @@
         ],
         "require": {
             "doctrine/orm": "*"
-        },
-        "require-dev": {
-            "symfony/maker-bundle": "^1.0"
         }
     },
     "conflict": {
