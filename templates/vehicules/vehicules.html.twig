@@ -23,9 +23,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/vehicules.css">
     <script src="scripts/vehicules.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <title>V.Parrot - Vehicules</title>
+    <title>Document</title>
 </head>
 
 <header>
@@ -69,45 +70,80 @@
 <body>
     <main class="container">
         <div class="container-left">
-            <div class="slider">
-                <div class="container-info">
-                    <h3 class="title">Kilométrage-toto</h3>
-                    <div class="container-km-filter" id="slider-container">
-                        <div class="test">
-                            <input type="range" min="0" max="500000" value="1000" id="slider1">
-                        </div>
-                        <div class="value" id="value">500000</div>
-                    </div>
-                    <h3 class="title">Année</h3>
-                    <div class="container-km-filter" id="slider-container">
-                        <div class="test">
-                            <input type="range" min="1980" max="2023" value="1" id="slider2">
-                        </div>
-                        <div class="value" id="value">2023</div>
-                    </div>
-                    <h3 class="title">Emission CO2</h3>
-                    <div class="container-km-filter">
-                        <div class="test">
-                            <input type="range" min="0" max="300" value="1" id="mySlides1">
-                        </div>
-                        <div class="value" id="value">300</div>
-                    </div>
-                    <h3 class="title">Emission CO2</h3>
-                    <div class="container-km-filter">
-                        <div class="test">
-                            <input type="range" min="0" max="300" value="1" id="mySlides1">
-                        </div>
-                        <div class="value" id="value">300</div>
-                    </div>
-                    <h3 class="title">Crit-Air</h3>
-                    <div class="container-km-filter">
-                        <div class="test">
-                            <input type="range" min="1" max="5" value="1" id="mySlides1">
-                        </div>
-                        <div class="value" id=".value">5</div>
-                    </div>
-                </div>
-            </div>
+        <div id="wrapper" class="slider">
+    <div id="sliderContainer" class="container-info">
+      <div class="tick-slider">
+        <div class="tick-slider-header">
+          <h3 class="title"><label for="kmSlider">kilométrage</label></h3>
+        </div>
+        <div class="tick-slider-value-container">
+          <div id="kmLabelMin" class="tick-slider-label"></div>
+          <div id="kmLabelMax" class="tick-slider-label"></div>
+          <div id="kmValue" class="tick-slider-value"></div>
+        </div>
+        <div class="tick-slider-background"></div>
+        <div id="kmProgress" class="tick-slider-progress"></div>
+        <div id="kmTicks" class="tick-slider-tick-container"></div>
+        <input id="kmSlider" class="tick-slider-input" type="range" min="0" max="500000" step="100" value="100" data-tick-step="1" data-tick-id="kmTicks" data-value-id="kmValue" data-progress-id="kmProgress" data-handle-an="18" data-min-label-id="kmLabelMin" data-max-label-id="kmLabelMax" />
+      </div>
+      <div class="tick-slider">
+        <div class="tick-slider-header">
+          <h3 class="title"><label for="anSlider">Année</label></h3>
+        </div>
+        <div class="tick-slider-value-container">
+          <div id="anLabelMin" class="tick-slider-label"></div>
+          <div id="anLabelMax" class="tick-slider-label"></div>
+          <div id="anValue" class="tick-slider-value"></div>
+        </div>
+        <div class="tick-slider-background"></div>
+        <div id="anProgress" class="tick-slider-progress"></div>
+        <div id="anTicks" class="tick-slider-tick-container"></div>
+        <input id="anSlider" class="tick-slider-input" type="range" min="1980" max="2023" step="1" value="2023" data-tick-step="1" data-tick-id="anTicks" data-value-id="anValue" data-progress-id="anProgress" data-handle-an="18" data-min-label-id="anLabelMin" data-max-label-id="anLabelMax" />
+      </div>
+      <div class="tick-slider">
+        <div class="tick-slider-header">
+          <h3 class="title"><label for="anSlider">Emission Co²</label></h3>
+        </div>
+        <div class="tick-slider-value-container">
+          <div id="co2LabelMin" class="tick-slider-label"></div>
+          <div id="co2LabelMax" class="tick-slider-label"></div>
+          <div id="co2Value" class="tick-slider-value"></div>
+        </div>
+        <div class="tick-slider-background"></div>
+        <div id="co2Progress" class="tick-slider-progress"></div>
+        <div id="co2Ticks" class="tick-slider-tick-container"></div>
+        <input id="co2Slider" class="tick-slider-input" type="range" min="0" max="300" step="1" value="50" data-tick-step="1" data-tick-id="co2Ticks" data-value-id="co2Value" data-progress-id="anProgress" data-handle-an="18" data-min-label-id="anLabelMin" data-max-label-id="anLabelMax" />
+      </div>
+      <div class="tick-slider">
+        <div class="tick-slider-header">
+          <h3 class="title"><label for="anSlider">Crit-Air</label></h3>
+        </div>
+        <div class="tick-slider-value-container">
+          <div id="airLabelMin" class="tick-slider-label"></div>
+          <div id="airLabelMax" class="tick-slider-label"></div>
+          <div id="airValue" class="tick-slider-value"></div>
+        </div>
+        <div class="tick-slider-background"></div>
+        <div id="airProgress" class="tick-slider-progress"></div>
+        <div id="airTicks" class="tick-slider-tick-container"></div>
+        <input id="airSlider" class="tick-slider-input" type="range" min="1" max="5" step="1" value="50" data-tick-step="1" data-tick-id="airTicks" data-value-id="airValue" data-progress-id="airProgress" data-handle-an="18" data-min-label-id="airLabelMin" data-max-label-id="airLabelMax" />
+      </div>
+      <div class="tick-slider">
+        <div class="tick-slider-header">
+          <h3 class="title"><label for="anSlider">Puissance</label></h3>
+        </div>
+        <div class="tick-slider-value-container">
+          <div id="powerLabelMin" class="tick-slider-label"></div>
+          <div id="powerLabelMax" class="tick-slider-label"></div>
+          <div id="powerValue" class="tick-slider-value"></div>
+        </div>
+        <div class="tick-slider-background"></div>
+        <div id="powerProgress" class="tick-slider-progress"></div>
+        <div id="powerTicks" class="tick-slider-tick-container"></div>
+        <input id="powerSlider" class="tick-slider-input" type="range" min="0" max="600" step="1" value="50" data-tick-step="1" data-tick-id="powerTicks" data-value-id="powerValue" data-progress-id="powerProgress" data-handle-an="18" data-min-label-id="powerLabelMin" data-max-label-id="powerLabelMax" />
+      </div>
+    </div>
+  </div>
 
             <div class="container-info">
                 <h3 class="title">Marque</h3>
@@ -131,7 +167,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="p308">Peugeot 308 GT-Line</a>
+                            <a href="308.php">Peugeot 308 GT-Line</a>
                         </h4>
                         <li>1.6l BlueHDI 120</li>
                         <li>58 552km</li>
@@ -148,7 +184,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="a3">Audi A3</a>
+                            <a href="a3.php">Audi A3</a>
                         </h4>
                         <li>2.0l TDI 150</li>
                         <li>60 150km</li>
@@ -165,7 +201,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="corsa">Opel Corsa</a>
+                            <a href="corsa.php">Opel Corsa</a>
                         </h4>
                         <li>1.3l CDTI 75 Ecoflex</li>
                         <li>150 150km</li>
@@ -182,7 +218,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="xc90">Volvo XC90</a>
+                            <a href="xc90.php">Volvo XC90</a>
                         </h4>
                         <li>2.0l Hybride 320 + 87</li>
                         <li>12 150km</li>
@@ -202,7 +238,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="clio">Renault Clio 5 Intens</a>
+                            <a href="clio.php">Renault Clio 5 Intens</a>
                         </h4>
                         <li>1.3l TCE 130</li>
                         <li>10km</li>
@@ -219,7 +255,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="cx5">Mazda CX-5</a>
+                            <a href="cx5.php">Mazda CX-5</a>
                         </h4>
                         <li>2.2l SkyActiv-D 175</li>
                         <li>120 300km</li>
@@ -236,7 +272,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="focus">Ford Focus 4</a>
+                            <a href="focus.php">Ford Focus 4</a>
                         </h4>
                         <li>1.5 TDCI 120</li>
                         <li>60 150km</li>
@@ -253,7 +289,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="i20">Hyundai i20</a>
+                            <a href="i20.php">Hyundai i20</a>
                         </h4>
                         <li>1.0l T-GDI 100</li>
                         <li>10 150km</li>
@@ -273,7 +309,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                                <a href="c3">Citroën C3</a>
+                                <a href="c3.php">Citroën C3</a>
                         </h4>
                         <li>1.4l HDI 75</li>
                         <li>170 150km</li>
@@ -290,7 +326,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="polo">Volkswagen Polo 7</a>
+                            <a href="polo.php">Volkswagen Polo 7</a>
                         </h4>
                         <li>1.0l TSI 95</li>
                         <li>20 150km</li>
@@ -307,7 +343,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="leon">Seat Leon 3</a>
+                            <a href="leon.php">Seat Leon 3</a>
                         </h4>
                         <li>1.5l e-TSI 150</li>
                         <li>30 150km</li>
@@ -324,7 +360,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="micra">Nissan Micra</a>
+                            <a href="micra.php">Nissan Micra</a>
                         </h4>
                         <li>1.2l 80</li>
                         <li>120 140km</li>
@@ -344,7 +380,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="zafira">Opel Zafira OPC</a>
+                            <a href="zafira.php">Opel Zafira OPC</a>
                         </h4>
                         <li>2.0l 240</li>
                         <li>130 860km</li>
@@ -361,7 +397,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="bravo">Fiat Bravo</a>
+                            <a href="bravo.php">Fiat Bravo</a>
                         </h4>
                         <li>1.6l Multijet 120</li>
                         <li>100 400km</li>
@@ -378,7 +414,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="p407sw">Peugeot 407 SW</a>
+                            <a href="407sw.php">Peugeot 407 SW</a>
                         </h4>
                         <li>2.0l HDI 136</li>
                         <li>220 750km</li>
@@ -395,7 +431,7 @@
                         <h4 class="car-title">
                             <span class="icon"><i class="bi bi-car-front-fill"></i>
                             </span>
-                            <a href="captur">Renault Captur</a>
+                            <a href="captur.php">Renault Captur</a>
                         </h4>
                         <li>1.5l DCI 90</li>
                         <li>64 000km</li>
@@ -461,5 +497,4 @@
 </footer>
 </body>
 </html>
-
 {% endblock %}
