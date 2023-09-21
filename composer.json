@@ -86,10 +86,7 @@
         ],
         "compile": [
             "php bin/console doctrine:migrations:migrate"
-        ],
-        "require": {
-            "doctrine/orm": "*"
-        }
+        ]
     },
     "conflict": {
         "symfony/symfony": "*"
